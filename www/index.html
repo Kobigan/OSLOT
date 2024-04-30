@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+  
+  <!-- Head (non visible)-->
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Oslot</title>
+  </head>
+  <body>
+
+    
+
+    <!-- Navigation du site -->
+    <nav id="navbar">
+
+      <a href="#about" class="logo-2">Oslot.</a>
+        <div class="nav-background">
+          <a href="#about" class="logo">Oslot.</a>
+          <ul>
+            <li><a href="#Home">HOME</a></li>
+            <li><a href="#about">ABOUT US</a></li>
+            <li><a href="#features">NEW FEATURES</a></li>
+            <li><a href="#subscribe">SUBSCRIBE </a></li>
+        </ul>
+        </div>
+        <img src="IMG/menu-btn.png" alt="menu hamburger" class="menu-hamburger">
+    </nav>
+    
+
+
+
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+        <!-- Section : Home-->
+        <section id="Home">
+          <div class="fond"></div>
+            <!--<img class="fond2" src="C:\Users\kobig\Music\test\IMG\V2.png" />-->
+              <div class="overlap-5">
+                <img class="pimage" src="IMG/Pimage.png" />
+                
+                <p class="t">WE BELIVE THAT <br /> INTERIOR BEAUTY LASTS</p>
+                <p class="t-2">
+                  Quisque viverra in turpis quis pulvinar. Morbi quis pellentesque nunc. Suspendisse potenti. Vestibulum leo metus, dictum a posuere non, efficitur lacinia augue. Fusce vitae finibus ipsum, non cursus lorem.              
+                </p>
+                <form action = "/index.html" class="frame" method="post">
+                  <input class="texthome" id = "email2" name ="email2" placeholder="Email Address...">
+                  <button type="submit" class="b-sub" id="but2"><div class="text-wrapper-home">SUBSCRIBE</div></button>
+                </form>
+                <!-- Message de réussite ou d'erreur -->
+                <h5 id="message2"></h5>   
+              </div>
+          </section>
+        
+
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--> 
+
+        <!-- Section : About us -->
+        <section id="about">
+            <!-- Background -->
+            <div class="frame-ABOUT"></div>
+            <div class="content-center">
+              <div class="pointiller"></div>
+              
+              <!-- Importation de l'image -->
+              <img class="about-img" src="IMG/about-img.png" />
+              
+              <!-- Texte de la section About us-->
+              <p class="t-ABOUT">
+                Quisque viverra in turpis quis pulvinar. Morbi quis pellentesque nunc. Suspendisse potenti. Vestibulum leo metus, dictum a posuere non, efficitur lacinia augue. Fusce vitae finibus ipsum, non cursus lorem. 
+              </p>
+              <!--<img class="line" src=""C:\Users\kobig\Music\test\IMG\About.png"" />-->
+              <!--<div class="image"><img class="Pimage" src="C:\Users\kobig\Music\test\IMG\Pimage.png"/></div>-->
+              <p class="t-ABOUT-2">WE BELIEVE THAT<br />INTERIOR BEAUTY LASTS LONG</p>
+              <img class="l-ABOUT" src="IMG/l_ABOUT.png"/> <!-- Importation image -->
+              <div class="t-ABOUT-3">ABOUT US</div>
+              <div class="b-ABOUT"><div class="learn-more">LEARN MORE</div></div>
+            </div>
+        </section>
+
+
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->        
+
+        <!-- Section : New features -->
+        <section id="features">
+            <div class="ovale"></div>
+            <div class="ovale-2"></div>
+            <div class="ovale-3"></div>
+            <div class="overlap-2">
+              <div class="title">NEW FEATURES</div>
+              <div class="text-wrapper-2">NEW FEATURES</div>
+            </div>
+        </section>
+
+
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->      
+
+
+        <!-- Section : subscribe Newsletter-->
+        <section id="subscribe">
+            <div class="overlap-group">
+              <form action = "/index.html" class="overlap" method="post">
+                <input class="text" id = "email" name ="email" placeholder="Email Address...">
+                <button type="submit" class="b-SUBSCRIBE" id="but"><div class="text-wrapper">SUBSCRIBE</div></button>
+              </form>
+              <p class="p">We won't send any kind of spam</p>
+              <div class="t-SUBSCRIBE-2">Subscribe Our Newsletter</div>
+              <!-- Message de réussite ou d'erreur -->
+              <h5 id="message"></h5>
+              
+          </div>
+        </section>
+        
+<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->       
+      
+    <script src="script.js"></script>
+    
+    <!-- Ce script permet d'envoyer un message lorsqu'on rentre ou on rentre pas de mails -->
+    <script>
+
+      let button = document.getElementById('but'); // Variable contenant le bouton 
+      let button2 = document.getElementById('but2'); // Variable contenant le bouton 
+      let email = document.getElementById('email'); //Variable contenant le champ de texte
+      let email2 = document.getElementById('email2'); //Variable contenant le champ de texte
+      let message = document.getElementById('message');
+      let message2 = document.getElementById('message2');
+  
+      let right = "#5f8c5e"; //Couleur correspondant au succès
+      let wrong = "#AD0606"; //Couleur correspondant à une erreur
+      
+      // Cette partie permet de répondre au clique de la section subscbribe 
+
+      button.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        // Regex pour validation de l'email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (this.email.value == null || this.email.value == "") { //Si champ email vide
+          
+          message.innerHTML = "Le champ e-mail ne peut pas être vide";
+          message.style.color = wrong;
+        } else if(!emailRegex.test(email.value)){ // Si l'email n'est pas conforme
+          message.innerHTML="Veuillez entrer une adresse e-mail valide";
+          message.style.color = wrong;
+        }
+        else { 
+          message.innerHTML = "Bienvenue à notre newsletter";
+          message.style.color = right;
+          let fetchData = {
+            method: 'POST',
+            body: JSON.stringify({email: this.email.value, js:true}), 
+            headers: {"Content-Type": "application/json"}
+          }
+          fetch('/index', fetchData)
+            .then(res => {
+              if (res.ok) {
+                console.log('Continue ça fonctionne');
+              } else { console.log('Ne lache rien'); }
+          });
+        }
+      });
+
+      // Cette partie permet de répondre au clique de la section home
+
+      button2.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        // Regex pour validation de l'email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (this.email2.value == null || this.email2.value == "") { //Si champ email vide
+          
+          message2.innerHTML = "Le champ e-mail ne peut pas être vide ";
+          message2.style.color = wrong;
+        } else if(!emailRegex.test(email2.value)){ // Si l'email n'est pas conforme
+          message2.innerHTML="Veuillez entrer une adresse e-mail valide ";
+          message2.style.color = wrong;
+        }
+        else { 
+          message2.innerHTML = "Bienvenue à notre newsletter";
+          message2.style.color = right;
+          let fetchData = {
+            method: 'POST',
+            body: JSON.stringify({email: this.email2.value, js:true}), 
+            headers: {"Content-Type": "application/json"}
+          }
+          fetch('/index', fetchData)
+            .then(res => {
+              if (res.ok) {
+                console.log('Continue ça fonctionne');
+              } else { console.log('Ne lache rien'); }
+          });
+        }
+      });
+  
+    </script>
+
+    
+    <!-- Ce script permet de cliquer sur le menu-hamburger -->
+    <script>
+      const burgerMenu = document.querySelector('.menu-hamburger');
+      const mainMenu = document.querySelector('.nav-background');
+      burgerMenu.addEventListener('click', () => {
+      mainMenu.classList.toggle('mobile-menu');
+    });
+
+    </script>
+  </body>
+</html>

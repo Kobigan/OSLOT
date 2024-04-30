@@ -1,0 +1,1452 @@
+:root {
+  --black: #000000;
+  --blue-ciel: #0ef;
+  --color1: #333;
+  --color2: #ffffff40;
+  --color3: #faf8f8ed;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap');
+body {
+  display: block;
+  /* margin: 0;
+padding: 0; */
+  position: relative;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* html {
+  overflow-x: hidden;
+} */
+
+section :not(#subscribe) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  color: #fff;
+  font-weight: 700;
+}
+
+
+/*******************************************************************************/
+
+
+/*******************************************************************************/
+
+
+/*** PARTIE NAVBAR *************************************************************/
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--color1);
+  /* Couleur de votre choix */
+  z-index: 1000;
+  /* S'assurer qu'elle reste au-dessus des autres éléments */
+  transition: top 0.3s;
+}
+
+.nav-background {
+  /*background-color: #427ce8; /* Couleur de fond de votre choix */
+  border-radius: 15px;
+  /* Ajustez la valeur pour modifier le rayon des coins arrondis */
+  width: 90%;
+  /* ou une largeur spécifique selon vos besoins */
+  height: 60px;
+  /* Hauteur de la barre de navigation */
+  position: absolute;
+  /* ou 'fixed' selon le comportement souhaité */
+  top: 0;
+  /* Ajustez selon l'emplacement souhaité */
+  left: 0;
+  /* Ajustez selon l'emplacement souhaité */
+  z-index: 10;
+  /* Assurez-vous qu'il est au-dessus des autres éléments */
+  transform: translate(90px, 0px);
+  align-items: center;
+  /* GLASSMORPHISM */
+  background-color: var(--color2);
+  /* Couleur de fond semi-transparente */
+  backdrop-filter: blur(10px);
+  /* Effet de flou en arrière-plan */
+  -webkit-backdrop-filter: blur(10px);
+  /* Pour le support de Safari */
+  border: 1px solid var(--color3);
+  /* Bordure légère pour renforcer l'effet glassy */
+}
+
+nav ul {
+  transform: translate(-100px, 0px);
+  list-style: none;
+  width: 100%;
+  text-align: right;
+  padding-right: 60px;
+  position: fixed;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.logo {
+  font-size: 25px;
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: "Agrandir Grand", Helvetica;
+  transform: translate(100px, 15px);
+  text-align: left;
+  padding-right: 60px;
+  position: fixed;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.logo-2 {
+  font-size: 25px;
+  color: #f6f3f300;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: "Agrandir Grand", Helvetica;
+  transform: translate(100px, 15px);
+  text-align: left;
+  padding-right: 60px;
+  position: fixed;
+  overflow: hidden;
+  z-index: 1;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+nav ul li a {
+  color: #0d0d0d;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: var(--blue-ciel);
+}
+
+nav .menu-hamburger {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 20px;
+}
+
+
+/*******************************************************************************/
+
+
+/*******************************************************************************/
+
+
+/*** PARTIE Home ***************************************************************/
+
+#Home .fond {
+  background-image: url("IMG/Groupe1.png");
+  background-size: cover;
+  height: 1032px;
+  left: 150px;
+  position: absolute;
+  top: -200px;
+  width: 1440px;
+}
+
+#Home .overlap-5 {
+  /* La frame de la section home */
+  position: absolute;
+  width: 571px;
+  height: 482px;
+  background-color: #427ce8;
+  transform: translate(100px, 150px);
+  border-radius: 40px;
+  background-color: rgba(64, 76, 234, 0.536);
+  /* Couleur de fond semi-transparente */
+  backdrop-filter: blur(10px);
+  /* Effet de flou en arrière-plan */
+  -webkit-backdrop-filter: blur(10px);
+  /* Pour le support de Safari */
+  border: 1px solid rgba(111, 95, 235, 0.18);
+  /* Bordure légère pour renforcer l'effet glassy */
+}
+
+#Home .overlap-5 .pimage {
+  /* L'image à droite dans la section home*/
+  height: 538px;
+  right: 172px;
+  object-fit: cover;
+  position: absolute;
+  transform: translate(900px, 25px);
+  width: 555px;
+}
+
+#Home .overlap-5 .t {
+  position: absolute;
+  top: 31px;
+  left: 75px;
+  font-family: "Bayon-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 31px;
+  initial-letter: 0;
+  line-height: 33px;
+  text-align: center;
+}
+
+#Home .overlap-5 .t-2 {
+  position: absolute;
+  width: 329px;
+  top: 164px;
+  left: 110px;
+  font-family: "Raleway-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 16px;
+  initial-letter: 0;
+  line-height: 16.8px;
+  text-align: center;
+}
+
+#Home .overlap-5 .frame .b-sub {
+  /* Bouton*/
+  top: 0px;
+  left: 266px;
+  height: 100%;
+  width: 150px;
+  padding: 25px 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: 30px;
+  background: transparent;
+  position: absolute;
+  transition: all .2s;
+  overflow: hidden;
+  color: #fff;
+  border-radius: 25px;
+  box-shadow: 0px -0px 0px 0px rgb(47, 152, 193), 0px 0px 0px 0px rgba(217, 217, 217, 0.5);
+}
+
+#Home .overlap-5 .frame .b-sub .text-wrapper-home {
+  color: #f0e9e9;
+  font-family: "Be Vietnam-ExtraBold", Helvetica;
+  font-size: 19.3px;
+  font-weight: 800;
+  left: 15px;
+  letter-spacing: 0;
+  line-height: 20.6px;
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  /* Centrer précisément les éléments */
+  width: auto;
+  /* Ajustez selon le besoin */
+  height: auto;
+  /* Ajustez selon le besoin */
+}
+
+#Home .overlap-5 .frame .b-sub::after {
+  content: '';
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: -50px;
+  left: -100px;
+  background-image: linear-gradient(to right, #225de7 0%, #0f373f 50%, #a1b8e6 100%);
+  z-index: -1;
+  transition: all .5s;
+}
+
+#Home .overlap-5 .frame .b-sub:hover::after {
+  transform: rotate(150deg);
+}
+
+#Home .overlap-5 .frame .b-sub:hover {
+  box-shadow: 10px -10px 25px 0px rgba(217, 217, 217, 0.25), -10px 10px 25px 0px rgba(47, 151, 193, .25);
+  color: #000000;
+}
+
+#Home .overlap-5 .frame .texthome {
+  /* Le texte dans la frame pour insérer les mails*/
+  font-size: 18px;
+  width: 60%;
+  border: none;
+  padding: 0px 15px;
+  margin-right: 5px;
+  outline: none;
+  background: none;
+  top: 20px;
+  left: 0;
+  justify-content: center;
+  position: absolute;
+  opacity: 0, 10;
+  color: #000000;
+}
+
+#Home .overlap-5 .frame {
+  /* La frame pour insérer les mails*/
+  background-color: #d9d9d9b6;
+  border-radius: 25px;
+  height: 55px;
+  left: 72px;
+  position: absolute;
+  top: 275px;
+  width: 415px;
+  justify-content: center;
+  border: 1px solid rgba(250, 248, 248, 0.401);
+  /* Bordure légère pour renforcer l'effet glassy */
+}
+
+#Home .overlap-5 #message2 {
+  /* Le message qui s'affiche lorsqu'on clique sur le bouton */
+  position: absolute;
+  /* Permet un positionnement précis à l'intérieur de overlap-group */
+  transform: translate(0px, 150px);
+  /* Centre le message horizontalement */
+  font-size: 0.9rem;
+  /* Ajuste la taille de la police du texte, si nécessaire */
+  width: auto;
+  /* Permet au message de prendre la largeur de son contenu */
+  text-align: center;
+  /* Assure que le texte à l'intérieur du message est centré */
+}
+
+
+/*******************************************************************************/
+
+
+/*******************************************************************************/
+
+
+/*** PARTIE ABOUT US ***********************************************************/
+
+#about {
+  /*Caractéristique de la section entière de About us*/
+  height: 496px;
+  left: 122px;
+  position: absolute;
+  top: 850px;
+  width: 1177px;
+}
+
+#about .frame-ABOUT {
+  /* La frame de la section About us*/
+  background: linear-gradient( 180deg, #2b2d42 0%, rgb(86.61, 106.84, 136.21) 36.1%, rgb(94.04, 149.77, 164.26) 61.6%, rgb(77, 103, 120) 100%);
+  height: 496px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1075px;
+}
+
+#about .pointiller {
+  /* Ce code permet de faire le cadre en pointiller */
+  border: 2px dashed;
+  border-color: #000000;
+  box-shadow: 0px 4px 4px #00000080;
+  height: 385px;
+  left: 548px;
+  position: absolute;
+  top: 32px;
+  width: 623px;
+}
+
+#about .about-img {
+  /* L'image dans la section About us */
+  height: 399px;
+  left: 517px;
+  object-fit: cover;
+  position: absolute;
+  top: 27px;
+  width: 648px;
+}
+
+#about .t-ABOUT {
+  color: #ffffff;
+  font-family: "Raleway-Medium", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  left: 101px;
+  letter-spacing: 0;
+  line-height: 16.8px;
+  position: absolute;
+  top: 240px;
+  width: 320px;
+  height: 66PX;
+}
+
+#about .t-ABOUT-2 {
+  color: #ffffff;
+  font-family: "Raleway-Medium", Helvetica;
+  font-size: 18px;
+  font-weight: 500;
+  left: 80px;
+  letter-spacing: 0;
+  line-height: 18.8px;
+  position: absolute;
+  top: 120px;
+  width: 320px;
+  height: 66PX;
+}
+
+#about .l-ABOUT {
+  /* L'image qui représente la ligne */
+  height: 1px;
+  left: 101px;
+  object-fit: cover;
+  position: absolute;
+  top: 65px;
+  width: 44px;
+}
+
+#about .t-ABOUT-3 {
+  position: absolute;
+  top: 42px;
+  left: 101px;
+  font-family: "Bayon-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 21px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 13.8px;
+  white-space: nowrap;
+}
+
+#about .b-ABOUT {
+  /* Bouton */
+  position: absolute;
+  width: 173px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 1);
+  background: linear-gradient(180deg, rgb(47, 151, 193) 0%, rgba(217, 217, 217, 0)100%);
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: 0px;
+  transition: all .2s;
+  overflow: hidden;
+  color: #fff;
+  transform: translate(-390px, 430px);
+}
+
+#about .b-ABOUT::after {
+  /* Bouton après son animation */
+  content: '';
+  width: 2000px;
+  height: 1000px;
+  position: absolute;
+  top: -50px;
+  left: -100px;
+  background-image: linear-gradient(225deg, #8f8df4 0%, #8c7bd4 50%, #6c6af5 100%);
+  z-index: -1;
+  transition: all .5s;
+}
+
+#about .b-ABOUT:hover::after {
+  /* Etat du bouton lors du survolage */
+  transform: rotate(150deg);
+}
+
+#about .b-ABOUT:hover {
+  /* Animation lors du survolage du bouton */
+  transform: translate(100, 350px);
+  box-shadow: 10px -10px 25px 0px hsla(229, 73%, 72%, 0.25), -10px 10px 25px 0px rgba(117, 135, 234, 0.752);
+}
+
+#about .b-ABOUT .learn-more {
+  /* L'écriture dans le bouton */
+  left: 11px;
+  top: 44px;
+  font-family: "Bayon-Regular", Helvetica;
+  color: #fff;
+  /* Changement de couleur pour améliorer la visibilité */
+  font-size: 19.3px;
+  text-align: center;
+  z-index: 999;
+}
+
+
+/*******************************************************************************/
+
+
+/*******************************************************************************/
+
+
+/*** PARTIE NEW FEARTURES ******************************************************/
+
+#features {
+  position: relative;
+  margin: 0 auto;
+  top: 1500px;
+  height: 620px;
+  width: 993px;
+}
+
+#features .ovale {
+  /* Ovale à droite */
+  background-color: #d9d9d9;
+  border-radius: 185px;
+  height: 470px;
+  left: 702px;
+  position: absolute;
+  top: 150px;
+  width: 287px;
+}
+
+#features .ovale-2 {
+  /* Ovale au millieu */
+  background-color: #d9d9d9;
+  border-radius: 185px;
+  height: 470px;
+  left: 351px;
+  position: absolute;
+  top: 150px;
+  width: 287px;
+}
+
+#features .ovale-3 {
+  /* Ovale à gauche */
+  background-color: #d9d9d9;
+  border-radius: 185px;
+  height: 470px;
+  left: 0;
+  position: absolute;
+  top: 150px;
+  width: 287px;
+}
+
+#features .overlap-2 {
+  /* Regroupement des deux textes */
+  height: 104px;
+  left: 194px;
+  position: absolute;
+  top: 0;
+  width: 614px;
+  font-family: "Inter-Medium", Helvetica;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+#features .title {
+  /*Texte en avant plan */
+  color: #000000;
+  font-size: 53px;
+  font-weight: 500;
+  left: 97px;
+  position: absolute;
+  top: 40px;
+}
+
+#features .text-wrapper-2 {
+  /* Texte en arrière plan */
+  color: #00000038;
+  font-size: 80px;
+  font-weight: 500;
+  height: 97px;
+  white-space: nowrap;
+}
+
+
+/*******************************************************************************/
+
+
+/*******************************************************************************/
+
+
+/*** PARTIE SUBSCRIBE **********************************************************/
+
+#subscribe {
+  height: 5vh;
+  transform: translateY(2700px);
+  width: 150vw;
+}
+
+#subscribe .overlap-group {
+  transform: translate(-10px, -160px);
+  width: 100vw;
+  height: 400px;
+  background: linear-gradient( 180deg, rgb(77, 103, 120) 0%, rgba(14.09, 68.48, 103.06, 0.84) 63.82%, rgba(67, 80, 88, 0.75) 100%);
+}
+
+#subscribe .overlap-group .overlap {
+  background-color: #d9d9d9;
+  border-radius: 25px;
+  height: 65px;
+  left: 640px;
+  position: absolute;
+  top: 140px;
+  width: 678px;
+  border: 1px solid rgba(254, 254, 254, 0.934);
+  /* Bordure légère pour renforcer l'effet glassy */
+}
+
+#subscribe .overlap-group .t-SUBSCRIBE-2 {
+  color: #00000080;
+  font-family: "Be Vietnam-Regular", Helvetica;
+  font-size: 19.3px;
+  font-weight: 400;
+  left: 29px;
+  letter-spacing: 0;
+  line-height: 20.6px;
+  position: absolute;
+  top: 29px;
+  white-space: nowrap;
+}
+
+#subscribe .overlap-group .overlap .b-SUBSCRIBE {
+  top: 0px;
+  left: 519px;
+  padding: 32px 80px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: 0px;
+  background: transparent;
+  position: absolute;
+  transition: all .2s;
+  overflow: hidden;
+  color: #fff;
+  border-radius: 25px;
+  box-shadow: 0px -0px 0px 0px rgba(47, 151, 193, 0.5), 0px 0px 0px 0px rgba(217, 217, 217, 0.5);
+  text-align: center;
+}
+
+#subscribe .overlap-group .overlap .b-SUBSCRIBE::after {
+  content: '';
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: -50px;
+  left: -100px;
+  background-image: linear-gradient(225deg, #64b7bf 0%, #d3dddf 50%, #281b87 100%);
+  z-index: -1;
+  transition: all .5s;
+}
+
+#subscribe .overlap-group .overlap .b-SUBSCRIBE:hover::after {
+  transform: rotate(150deg);
+}
+
+#subscribe .overlap-group .overlap .b-SUBSCRIBE:hover {
+  transform: translate(0, 0px);
+  box-shadow: 10px -10px 25px 0px rgba(217, 217, 217, 0.25), -10px 10px 25px 0px rgba(47, 151, 193, .25);
+}
+
+#subscribe .overlap-group .overlap .b-SUBSCRIBE .text-wrapper {
+  color: #000000;
+  font-family: "Be Vietnam-ExtraBold", Helvetica;
+  font-size: 19.3px;
+  font-weight: 800;
+  left: 15px;
+  letter-spacing: 0;
+  line-height: 20.6px;
+  position: absolute;
+  top: 22px;
+  white-space: nowrap;
+}
+
+#subscribe .overlap-group .p {
+  color: #ffffff;
+  font-family: "Bayon-Regular", Helvetica;
+  font-size: 19.3px;
+  font-weight: 800;
+  left: 130px;
+  letter-spacing: 0;
+  line-height: 20.6px;
+  position: absolute;
+  top: 180px;
+}
+
+#subscribe .overlap-group .t-SUBSCRIBE-2 {
+  color: #ffffff;
+  font-family: "Be Vietnam-Regular", Helvetica;
+  font-size: 40px;
+  font-weight: 400;
+  left: 122px;
+  letter-spacing: 0;
+  line-height: 42.6px;
+  position: absolute;
+  text-align: center;
+  top: 117px;
+  white-space: nowrap;
+}
+
+#subscribe .overlap-group .text {
+  /* Le texte dans la frame pour insérer les mails*/
+  font-size: 18px;
+  width: 80%;
+  border: none;
+  padding: 5px 20px;
+  margin-right: 5px;
+  outline: none;
+  background: none;
+  top: 20px;
+  left: 2px;
+  position: absolute;
+  color: #000000;
+}
+
+#subscribe .overlap-group #message {
+  position: absolute;
+  /* Permet un positionnement précis à l'intérieur de overlap-group */
+  bottom: 130px;
+  /* Alignez le message au bas de overlap-group */
+  left: 50%;
+  /* Positionne le point de départ du message au milieu de overlap-group */
+  transform: translate(60px, 20px);
+  /* Centre le message horizontalement */
+  font-size: 0.9rem;
+  /* Ajuste la taille de la police du texte, si nécessaire */
+  width: auto;
+  /* Permet au message de prendre la largeur de son contenu */
+  text-align: center;
+  /* Assure que le texte à l'intérieur du message est centré */
+}
+
+@media screen and (max-width: 640px) {
+
+  body {
+    margin: 0;
+  }
+  html {
+    overflow-x: hidden;
+  }
+  
+
+  /*Menu Burger */
+  #navbar .menu-hamburger {
+      display: block;
+      width: 35px;
+      right: 60px;
+      z-index: 10;
+      box-shadow: 0 0 0 3px black;
+      background-color: #000000;
+  }
+  #navbar .logo-2 {
+      top: 40px;
+      left: -40px;
+      display: block;
+      color: rgb(0, 0, 0);
+  }
+  #navbar .nav-background.mobile-menu {
+      display: flex;
+      margin-left: 0;
+  }
+  #navbar .nav-background {
+      background-color: rgba(7, 7, 7, 0.424);
+      border-color: rgba(7, 7, 7, 0.424);
+      backdrop-filter: blur(7px);
+      width: 110vw;
+      height: 100vh;
+      border-radius: 0px;
+      transform: translate(-10px, 0px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: -110%;
+      transition: all 0.5s ease;
+  }
+  #navbar .nav-background .logo {
+      top: 40px;
+      left: -40px;
+      display: block;
+  }
+  .nav-background ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transform: translateX(0px);
+  }
+  #navbar .nav-background ul li {
+      margin: 25px 0;
+      font-size: 1.2em;
+  }
+  
+  nav ul li a{
+    color: white;
+  }
+
+  /*************************************/
+  #Home {
+      height: 100vh;
+      transform: translateY(0px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+  }
+  #Home .fond {
+      position: absolute;
+      background-image: url("IMG/Groupe1.png");
+      background-size: cover;
+      height: 1032px;
+      width: 1440px;
+      transform: translate(-400px, -100px);
+      overflow-x: hidden;
+  }
+  #Home .overlap-5 {
+      width: 90vw;
+      transform: translateY(0px);
+      
+  }
+  #Home .overlap-5 .pimage {
+      display: none;
+  }
+  #Home .overlap-5 .t {
+      transform: translate(-50px, -50px);
+      padding-left: 20px;
+  }
+  #Home .overlap-5 .t-2 {
+      top: 250px;
+      left: 50px;
+      transform: translate(-40px, -50px);
+      width: auto;
+      padding-left: 40px;
+      font-size: 13px;
+      line-height: 13.8px;
+  }
+  #Home .overlap-5 .frame {
+      top: 350px;
+      height: 55px;
+      width: 250px;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  #Home .overlap-5 .frame .b-sub {
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  #Home .overlap-5 #message2 {
+      top: 290px;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  /*******************************************************************************/
+  /*******************************************************************************/
+  /*** PARTIE ABOUT US ***********************************************************/
+  #about {
+    height: 100vh;
+    left: 50%;
+    transform: translate(50%, 150px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+}
+#about .frame-ABOUT {
+    /* La frame de la section About us*/
+    height: 100%;
+    width: 100vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#about .pointiller {
+    /* Ce code permet de faire le cadre en pointiller */
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95vw;
+    height: 250px;
+    align-items: center;
+}
+#about .about-img {
+    /* L'image dans la section About us */
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    height: 250px;
+}
+#about .t-ABOUT,
+#about .t-ABOUT-2,
+#about .l-ABOUT,
+#about .t-ABOUT-3 {
+    left: 50%;
+    transform: translateX(-50%);
+}
+#about .b-ABOUT {
+    /* Bouton */
+    left: 50%;
+    transform: translateX(-50%);
+    top: 400px;
+}
+  /*****************************************************************************************/
+  #features {
+      transform: translateY(-200px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 50vh;
+      width: auto;
+  }
+  #features .ovale {
+      margin: 0 -130px;
+  }
+  #features .ovale-3 {
+      margin: 0 130px;
+  }
+  #features .ovale,
+  #features .ovale-2,
+  #features .ovale-3 {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 125px;
+      height: 250px;
+      margin-top: 20px
+  }
+  #features .overlap-2 {
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+  #features .overlap-2 .title {
+      font-size: 20px;
+      font-weight: 300;
+      left: 50%;
+      transform: translate(-50%, 120px);
+  }
+  #features .overlap-2 .text-wrapper-2 {
+      font-size: 40px;
+      font-weight: 300;
+      transform: translateY(100px);
+  }
+  /* *************************************************************** */
+  #subscribe {
+      transform: translateY(2000px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: auto;
+  }
+  #subscribe .overlap-group {
+      align-items: center;
+      transform: translateY(-160px);
+  }
+  #subscribe .overlap-group .overlap {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50vw;
+  }
+  #subscribe .overlap-group .overlap .b-SUBSCRIBE {
+      left: 50%;
+      top: 150px;
+      transform: translateX(-50%);
+  }
+  #subscribe .overlap-group .overlap .b-SUBSCRIBE:hover {
+      transform: translateX(-80px);
+  }
+  #subscribe .overlap-group .overlap .b-SUBSCRIBE:focus {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  #subscribe .overlap-group .t-SUBSCRIBE-2 {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      font-size: 30px;
+  }
+  #subscribe .overlap-group .p {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 40px;
+  }
+  #subscribe .overlap-group #message {
+      bottom: 150px;
+      left: 45%;
+      transform: translate(-100px, 30px);
+      font-size: 14px;
+  }
+}
+
+@media screen and (min-width:641px) and (max-width:1023px) {
+  body {
+    margin: 0;
+  }
+  html {
+    overflow-x: hidden;
+  }
+  /*Menu Burger */
+  #navbar .menu-hamburger {
+      display: block;
+      position: fixed;
+      width: 35px;
+      right: 70px;
+      z-index: 10;
+      box-shadow: 0 0 0 3px black;
+      background-color: #000000;
+  }
+  #navbar .logo-2 {
+      top: 40px;
+      left: -40px;
+      display: block;
+      color: rgb(0, 0, 0);
+  }
+  #navbar .nav-background.mobile-menu {
+      display: flex;
+      margin-left: 0;
+  }
+  #navbar .nav-background {
+      background-color: rgba(7, 7, 7, 0.424);
+      border-color: rgba(7, 7, 7, 0.424);
+      backdrop-filter: blur(7px);
+      width: 110vw;
+      height: 100vh;
+      border-radius: 0px;
+      transform: translate(-10px, 0px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: -110%;
+      transition: all 0.5s ease;
+  }
+  #navbar .nav-background .logo {
+      top: 40px;
+      left: -40px;
+      display: block;
+  }
+  .nav-background ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transform: translateX(0px);
+  }
+  #navbar .nav-background ul li {
+      margin: 25px 0;
+      font-size: 1.2em;
+  }
+  #navbar .nav-background ul li a {
+      color: #fcfafa;
+  }
+  /*************************************/
+  #Home {
+      height: 100vh;
+      transform: translateY(0px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+  }
+  #Home .fond {
+      position: absolute;
+      background-image: url("IMG/Groupe1.png");
+      background-size: cover;
+      height: 1032px;
+      width: 1440px;
+      transform: translate(-400px, -100px);
+  }
+  #Home .overlap-5 {
+      width: 80vw;
+      transform: translateY(-80px);
+      backdrop-filter: blur(1px);
+  }
+  #Home .overlap-5 .pimage {
+      display: none;
+  }
+  #Home .overlap-5 .t {
+      font-size: 40px;
+      transform: translate(-50px, -50px);
+      padding-left: 50px;
+  }
+  #Home .overlap-5 .t-2 {
+      top: 120px;
+      font-size: 20px;
+      line-height: 21px;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  #Home .overlap-5 .frame {
+      top: 350px;
+      height: 55px;
+      width: 350px;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  #Home .overlap-5 .frame .b-sub {
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+  }
+  #Home .overlap-5 #message2 {
+      top: 290px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 14px;
+  }
+  /*******************************************************************************/
+  /*******************************************************************************/
+  /*** PARTIE ABOUT US ***********************************************************/
+  #about {
+    height: 100vh;
+    left: 50%;
+    transform: translate(50%, 0px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+}
+#about .frame-ABOUT {
+    /* La frame de la section About us*/
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 100vw;
+    position: absolute;
+}
+#about .pointiller {
+    /* Ce code permet de faire le cadre en pointiller */
+    top: 450px;
+    left: 50%;
+    transform: translate(-50%, -5px);
+    height: 55vh;
+    width: 85vw;
+}
+#about .about-img {
+    /* L'image dans la section About us */
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 350px;
+}
+#about .t-ABOUT,
+#about .t-ABOUT-2,
+#about .l-ABOUT,
+#about .t-ABOUT-3 {
+    left: 50%;
+    transform: translateX(-50%);
+}
+#about .t-ABOUT-3 {
+    font-size: 25px;
+}
+#about .l-ABOUT {
+    top: 65px;
+    width: 20vw;
+}
+#about .t-ABOUT-2 {
+    top: 75px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 31px;
+}
+#about .t-ABOUT {
+    text-align: center;
+    top: 220px;
+    font-size: 20px;
+    line-height: 21px;
+}
+#about .b-ABOUT {
+    /* Bouton */
+    left: 50%;
+    transform: translateX(-50%);
+    top: 400px;
+    width: 200px;
+}
+  /*****************************************************************************************/
+  #features {
+      transform: translateY(0px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 50vh;
+      width: auto;
+  }
+  #features .ovale {
+      margin: 0 -210px;
+  }
+  #features .ovale-3 {
+      margin: 0 210px;
+  }
+  #features .ovale,
+  #features .ovale-2,
+  #features .ovale-3 {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 350px;
+      margin-top: 50px
+  }
+  #features .overlap-2 {
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+  #features .overlap-2 .title {
+      font-size: 50px;
+      font-weight: 300;
+      transform: translate(25px, 100px);
+  }
+  #features .overlap-2 .text-wrapper-2 {
+      font-size: 70px;
+      font-weight: 300;
+      transform: translateY(100px);
+  }
+  /* *************************************************************** */
+  #subscribe {
+      transform: translateY(2000px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: auto;
+  }
+  #subscribe .overlap-group {
+      align-items: center;
+      transform: translateY(-160px);
+  }
+  #subscribe .overlap-group .overlap {
+      left: 50%;
+      transform: translate(-50%, 70px);
+      width: 70vw;
+  }
+  #subscribe .overlap-group .overlap .b-SUBSCRIBE {
+      left: 50%;
+      top: 100px;
+      transform: translateX(-50%);
+  }
+  #subscribe .overlap-group .overlap .b-SUBSCRIBE:hover {
+      transition: background-color 0s;
+      /* Transition immédiate lors du clic */
+      transform: translateX(-80px);
+  }
+  #subscribe .overlap-group .overlap .b-SUBSCRIBE:focus {
+      transform: translate(0, 0);
+      /* Annule tout déplacement */
+      position: fixed;
+      /* Garde le bouton fixe à sa position */
+      bottom: 20px;
+      /* Ajustez cette valeur selon la position initiale du bouton */
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  #subscribe .overlap-group .t-SUBSCRIBE-2 {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+  }
+  #subscribe .overlap-group .p {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 40px;
+  }
+  #subscribe .overlap-group #message {
+      bottom: 150px;
+      left: 45%;
+      transform: translate(-100px, -35px);
+      font-size: 14px;
+  }
+}
+
+@media screen and (min-width:1700px) and (max-width:2000px) {
+  .fond {
+      background-size: cover;
+      height: 4032px;
+      width: 2840px;
+      transform: translateX(350px);
+      margin: 0px auto;
+  }
+  .pimage {
+      /* L'image à droite dans la section home */
+      left: 50px;
+  }
+  .overlap-5 {
+      /* La frame de la section home */
+      position: absolute;
+      width: 1000px;
+      height: 1000px;
+      transform: translate(0px, -250px);
+      margin: 0px auto;
+  }
+  #Home .overlap-5 .t-2 {
+      font-size: 17px;
+  }
+  /**/
+  .frame-ABOUT {
+      /* La frame de la section About us */
+      height: 1000px;
+      width: 2075px;
+  }
+  .pointiller {
+      /* Ce code permet de faire le cadre en pointiller */
+      height: 1000px;
+      left: 848px;
+      top: 32px;
+      width: 1523px;
+  }
+  .about-img {
+      /* L'image dans la section About us */
+      height: 1000px;
+      left: 817px;
+      top: 32px;
+      width: 1548px;
+  }
+  #about {
+      height: 496px;
+      transform: translate(250px, 150px);
+      width: 1177px;
+  }
+  #about .content-center .t-ABOUT-3 {
+      font-size: 30px;
+      line-height: 20px;
+  }
+
+  #about .content-center .t-ABOUT-2 {
+    font-size: 20px;
+    line-height: 20px;
+    left:95px;
+}
+
+  #about .l-ABOUT {
+      height: 1px;
+      transform: translate(0px, 5px);
+  }
+  #about .t-ABOUT-2 {
+      font-size: 15px;
+  }
+  #features {
+      transform: translateY(550px);
+  }
+}
+
+@media screen and (min-width:2000px) and (max-width:2700px) {
+  #Home .fond {
+      position: absolute;
+      background-size: cover;
+      height: 1332px;
+      width: 1800px;
+      transform: translate(400px, 100px);
+  }
+  #Home .overlap-5 {
+      position: absolute;
+      width: 571px;
+      height: 482px;
+      transform: translate(100px, 150px);
+      margin: 0px auto;
+  }
+  #Home .overlap-5 .pimage {
+      transform: translate(1400px, 50px);
+  }
+  #Home .overlap-5 .t-2 {
+      font-size: 17px;
+  }
+  #about {
+      transform: translateY(500px);
+      position: relative;
+      margin: 0 auto;
+  }
+  #about .frame-ABOUT {
+      height: 50vh;
+      width: 50vw;
+  }
+  #about .content-center .l-ABOUT {
+      font-size: 50px;
+      transform: translate(0px, 10px);
+  }
+  #about .content-center .t-ABOUT-3 {
+      font-size: 30px;
+      line-height: 20px;
+  }
+  #about .content-center .t-ABOUT-2 {
+      font-size: 23px;
+      line-height: 20px;
+      transform: translate(55px, 0px)
+  }
+  #about .content-center .t-ABOUT {
+      font-size: 22px;
+      line-height: 20px;
+      transform: translate(0px, 80px);
+  }
+  #about .content-center .b-ABOUT {
+      transform: translate(-380px, 480px);
+  }
+  #features {
+      transform: translateY(550px);
+  }
+  
+}
+
+@media screen and (min-width: 2700px) and (max-width:3700px) {
+  #about {
+      position: relative;
+      margin: 0 auto;
+  }
+  
+}
+
+@media screen and (min-width:3701px) and (max-width:8000px) {
+  #about {
+      position: relative;
+      margin: 0 auto;
+  }
+  
+}
+
+@media screen and (max-width:280px)   {
+  body{
+    background-color: #0ef;
+  }
+
+  #Home .overlap-5 .t {
+    
+    font-size: 21px;
+    line-height: 22px;
+  }
+
+  #Home .overlap-5 .t-2 {
+    top: 180px;
+  }
+
+  #Home .overlap-5 #message2 {
+    top: 250px;
+  }
+
+  #Home .overlap-5 .frame {
+    
+    width: 210px;
+    
+  }
+
+  #subscribe .overlap-group .overlap {
+    width: 80vw;
+  }
+
+  #subscribe .overlap-group .t-SUBSCRIBE-2 {
+    font-size: 20px;
+}
+
+  #subscribe .overlap-group #message {
+    
+    left: 50%;
+    transform: translate(-70px, 29px);
+  }
+  
+}
